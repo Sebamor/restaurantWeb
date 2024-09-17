@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'raleway';
+    src: url(./raleway.ttf) format(truetype);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'raleway', Arial, Helvetica, sans-serif; 
+}
+
+body {
+    background: #fff8f2;
+    height: 100%;
+    overflow: hidden;
+    background: teal;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    min-width: calc(100vw - 120px);
+    z-index: 100;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 60px;
+    max-width: calc(100vw - 120px);
+    gap: 40px;
+    border-bottom: 6px solid #ff983e;
+}
+
+#logo {
+    align-self: center;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    gap: 50px;
+    min-height: 100%;
+    margin-right: 100px;
+}
+
+nav > ul > li {
+    min-height: 100%;
+}
+
+nav > ul > li > button {
+    min-height: 100%;
+    border: none;
+    background: none;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+nav > ul > li > button:hover {
+    color: #ff983e;
+}
+
+nav > ul > li > button:active {
+    color: #ff983e;
+}
+
+#content {
+    margin: 60px 60px 60px 60px;
+    max-height: calc(100vh - 120px);
+    min-width: calc(100vw - 120px);
+    overflow-y: auto;
+    background: #fff8f2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#intro {
+    background: #ff983e;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    transform: rotate(4deg);
+    color: teal;
+    margin-top: 10%;
+    padding-bottom: 0;  
+}
+
+#intro > h2 {
+    font-size: 80px;
+    font-weight: bold;
+    transform: rotate(-4deg);
+    text-align: center;
+}
+
+@media screen and (max-width:520px) {
+    #intro > h2 {
+        font-size: 50px;
+    }
+}
+
+.blink {
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+#downArrow:hover {
+    animation: none;
+    background: teal;
+    border-radius: 50%;
+}
+
+#downArrow {
+    align-self: center;
+    margin-top: 50px;
+}
+
+#downArrow > svg {
+    width: 100px;
+}
+
+#firstContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+    gap: 20px;
+    height: 600px;
+    min-width: 100%;
+    justify-content: center;
+}
+
+#smallMenu {
+    border: 3px solid teal;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 30px;
+    color: #ff983e;
+    min-width: 50%;
+    justify-content: center;
+    align-items: center;
+
+    clip-path: polygon(
+        /* top edge */
+            var(--corner)              0%,
+            calc(100% - var(--corner)) 0%,
+        /* right edge */
+            100% var(--corner),
+            100% calc(100% - var(--corner)),
+        /* bottom edge */
+            calc(100% - var(--corner)) 100%,
+            var(--corner)              100%,
+        /* left edge */
+            0% calc(100% - var(--corner)),
+            0% var(--corner)
+    );
+
+    --corner: 1em
+}
+
+#titleSmallMenu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#titleSmallMenu > svg {
+    width: 40px;
+}
+#smallMenu > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#smallMenu > ul > li {
+    font-size: 24px;
+}
+
+#foodDescription {
+    color: teal;
+    font-size: 18px;
+}
+
+#waffles {
+    max-width: 50%;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        width: 100%;
+    }
+
+    nav {
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    nav > ul {
+        gap: 30px;
+        margin-right: 50px;
+    }
+
+    #content {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav > ul {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    nav > ul {
+        gap: 10px;
+    }
+    #firstContainer {
+        flex-direction: column;
+        padding-top: 250px;
+    }
+
+    #firstContainer > img {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-height:800px) {
+    #downArrow {
+        margin-top: 0;
+        height: 10px;
+    }
+
+    #downArrow > svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    #content {
+        gap: 10px;
+    }
+}
