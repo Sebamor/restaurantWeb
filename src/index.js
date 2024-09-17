@@ -1,6 +1,9 @@
 import "./main.css";
 import "./landing.js";
 import "./raleway.ttf";
+import loadLanding from "./landing.js";
+
+loadLanding();
 
 // Scroll to next section
 (() => {

@@ -1,7 +1,7 @@
 import waffle from "./img/hero.jpg";
 
 // Landing Page Html
-(() => {
+function  loadLanding(){
     // Div to hold content element
     const content = document.getElementById('content');
 
@@ -50,4 +50,6 @@ import waffle from "./img/hero.jpg";
     menuListContainer.innerHTML = '<li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li><li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li><li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li><li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>';
     menuContainer.appendChild(menuListContainer);
     
-})();
+}
+
+export default loadLanding;
