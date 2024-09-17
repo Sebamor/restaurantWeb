@@ -50,6 +50,15 @@ function  loadLanding(){
     menuListContainer.innerHTML = '<li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li><li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li><li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li><li>Sandwich <br> <p id="foodDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>';
     menuContainer.appendChild(menuListContainer);
     
+    // Scroll to next section
+(() => {
+    const downArrow = document.getElementById('downArrow');
+    const firstContainer = document.getElementById('firstContainer');
+
+    downArrow.addEventListener('click', () => {
+    firstContainer.scrollIntoView({behavior: 'smooth'})
+});
+})();
 }
 
 export default loadLanding;

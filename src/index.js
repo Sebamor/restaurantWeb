@@ -1,16 +1,23 @@
 import "./main.css";
-import "./landing.js";
 import "./raleway.ttf";
 import loadLanding from "./landing.js";
 
 loadLanding();
 
-// Scroll to next section
-(() => {
-    const downArrow = document.getElementById('downArrow');
-    const firstContainer = document.getElementById('firstContainer');
+function resetPage() {
+    const content = document.getElementById('content');
+    content.innerHTML = '';
+}
 
-    downArrow.addEventListener('click', () => {
-    firstContainer.scrollIntoView({behavior: 'smooth'})
-});
+(() => {
+    const home = document.getElementById('home');
+    const about = document.getElementById('about');
+
+    home.addEventListener('click', () => {
+        resetPage();
+    })
+
+    about.addEventListener('click', () => {
+        resetPage();
+    })
 })();
