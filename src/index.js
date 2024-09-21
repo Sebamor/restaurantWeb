@@ -1,4 +1,5 @@
 import "./main.css";
+import "./about.css";
 import loadLanding from "./landing.js";
 import loadAbout from "./about.js";
 

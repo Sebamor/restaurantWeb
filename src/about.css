@@ -1,0 +1,28 @@
+/* Contact Block */
+#contactContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* map element */
+#map {
+    height: 400px;
+    width: clamp(300px, 450px, 600px);
+}
+
+#mapContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
