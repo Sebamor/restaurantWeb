@@ -13,20 +13,23 @@ function loadAbout() {
     contactContainer.appendChild(contact);
     // Contact email/github/linkedin name
     const email = document.createElement('span');
-    email.textContent = "sebamor1995@gmail.com"
+    email.innerHTML = '<a href="mailto:sebamor1995@gmail.com">Sebamor1995@gmail.com</a>';
     const github = document.createElement('span');
-    github.textContent = "https://github.com/Sebamor";
+    github.innerHTML = '<a href="https://github.com/Sebamor">Sebamor</a>';
     const linkedIn = document.createElement('span');
-    linkedIn.textContent = "https://www.linkedin.com/in/sebastian-amor-b7b7712b9";
+    linkedIn.innerHTML = '<a href="https://www.linkedin.com/in/sebastian-amor-b7b7712b9">Sebastian Amor</a>';
     // Contact whole strings
     const contactEmail = document.createElement('p');
-    contactEmail.innerHTML = "Email: " + email.textContent;
+    contactEmail.innerHTML = "Email: ";
+    contactEmail.appendChild(email);
     contact.appendChild(contactEmail)
     const contactGithub = document.createElement('p');
-    contactGithub.innerHTML = "Github: " + github.textContent;
+    contactGithub.innerHTML = "Github: ";
+    contactGithub.appendChild(github);
     contact.appendChild(contactGithub);
     const contactLinkedIn = document.createElement('p');
-    contactLinkedIn.innerHTML = "LinkedIn: " + linkedIn.textContent;
+    contactLinkedIn.innerHTML = "LinkedIn: ";
+    contactLinkedIn.appendChild(linkedIn);
     contact.appendChild(contactLinkedIn);
 
     

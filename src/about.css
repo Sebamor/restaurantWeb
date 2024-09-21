@@ -11,6 +11,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 32px;
+    background: #ff983e;
+    padding: 40px;
+    gap: 20px;
+}
+
+#contact p {
+    font-weight: 700;
+    color: teal;
+}
+
+#contact span {
+    font-weight: 800;
+    color: white;
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
+}
+
+#contact a:hover {
+    color: teal;
 }
 
 
